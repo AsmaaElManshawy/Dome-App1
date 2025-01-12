@@ -1,0 +1,54 @@
+<section class="p-5">
+  <div class="container text-center">
+    <div>
+      <div class="row justify-content-center align-items-center">
+        <div class="col-lg-6">
+          <app-header
+            [titel]="'portfolio component'"
+            [color]="'none'"
+          ></app-header>
+        </div>
+      </div>
+      <div class="row g-5 mt-2">
+        @for (item of imgs; track $index) {
+        <div class="col-md-6 col-lg-4">
+          <div class="position-relative">
+            <img
+              [id]="$index"
+              [src]="item"
+              alt="poert"
+              class="w-100 d-block rounded-3"
+              (mouseenter)="show($event)"
+            />
+            @if (hideLayer[$index]) {
+            <div
+              class="layer position-absolute top-0 bottom-0 start-0 end-0 text-center text-white rounded-3"
+              [id]="$index"
+              (click)="zoom($event)"
+              (mouseleave)="hideen($event)"
+            >
+              <i
+                [id]="$index"
+                class="fa-solid fa-plus fa-7x"
+                (click)="zoom($event)"
+              ></i>
+            </div>
+            }
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+@if (hide) {
+<div
+  class="zoom bg-primary bg-opacity-25 d-flex justify-content-center align-items-center position-fixed end-0 bottom-0 start-0 top-0"
+  (click)="close($event)"
+>
+  <div>
+    <img [src]="url" alt="zoomed poert" id="20" class="zoomed-img" />
+  </div>
+</div>
+}

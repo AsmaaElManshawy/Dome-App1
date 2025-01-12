@@ -1,0 +1,46 @@
+input,
+.notaping {
+  color: rgb(33, 37, 41);
+  border-radius: 6px;
+  background-color: transparent;
+  z-index: 20;
+}
+
+input:focus {
+  border: none;
+  outline: 0;
+}
+
+button {
+  background-color: #1abc9c;
+  border: none;
+  padding: 10px 15px;
+  color: white;
+  border-radius: 6px;
+  position: absolute;
+  left: -5px;
+}
+
+.notaping {
+  position: relative;
+  width: fit-content;
+  top: 55px;
+  left: 5px;
+  transition: position 0.5s ease-in-out;
+}
+
+.ontaping::after {
+  content: ":";
+  color: #1abc9c;
+  position: absolute;
+  right: 5px;
+}
+
+.ontaping {
+  color: #1abc9c;
+  position: relative;
+  width: fit-content;
+  top: 0;
+  left: 0;
+  transition: position 1s ease-in-out;
+}

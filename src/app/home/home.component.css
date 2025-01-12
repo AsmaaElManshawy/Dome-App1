@@ -1,0 +1,9 @@
+section {
+  background-color: #1abc9c;
+}
+
+img {
+  width: 250px;
+  height: 265.5px;
+  object-fit: cover;
+}

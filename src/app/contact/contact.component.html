@@ -1,0 +1,48 @@
+<section class="pb-5 pt-3 px-2 px-md-0">
+  <div class="container text-center pb-3">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-lg-6">
+        <div>
+          <app-header [titel]="'conatct section'" [color]="'none'"></app-header>
+        </div>
+        <div class="position-relative py-5 mt-3">
+          <div class="row text-start">
+            <label [class.ontaping]="addcl[0]" class="notaping">userName</label>
+            <input
+              type="text"
+              id="0"
+              class="border-0 border-bottom p-3 mt-3 col-12"
+              (keyup)="changeclass($event)"
+            />
+            <label [class.ontaping]="addcl[1]" class="notaping">userAge</label>
+            <input
+              type="text"
+              id="1"
+              class="border-0 border-bottom p-3 mt-3 col-12"
+              (keyup)="changeclass($event)"
+            />
+            <label [class.ontaping]="addcl[2]" class="notaping"
+              >userEmail</label
+            >
+            <input
+              type="text"
+              id="2"
+              class="border-0 border-bottom p-3 mt-3 col-12"
+              (keyup)="changeclass($event)"
+            />
+            <label [class.ontaping]="addcl[3]" class="notaping"
+              >userPassword</label
+            >
+            <input
+              type="text"
+              id="3"
+              class="border-0 border-bottom p-3 mt-3 col-12"
+              (keyup)="changeclass($event)"
+            />
+          </div>
+          <button class="my-4">send Message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
